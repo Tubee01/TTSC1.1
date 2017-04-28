@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/asztal2"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:id="@+id/WinnerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold|italic"
+        android:textSize="30sp"
+        />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        android:onClick="resetTheScores"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:baselineAligned="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight ="1"
+
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/player_a"
+                android:textSize="20sp"
+                android:textColor="@color/red"
+                android:textStyle="bold|italic"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sets"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="45dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="70dp"
+                />
+
+            <TextView
+                android:id="@+id/SetsA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_0"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="45dp"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="2dp"
+                />
+
+            <Button
+                android:id="@+id/buttonA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:onClick="addpointPlayerA"
+                android:text="@string/point_for_player_a"
+                android:textAllCaps="false"
+                />
+
+
+            <TextView
+
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:gravity="center"
+                android:text="@string/score"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ScoreA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:gravity="center"
+                android:text="@string/_0"
+                android:textSize="30sp"
+                android:textColor="@color/black"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/player_b"
+                android:textSize="20sp"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/red"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/sets"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="50dp"/>
+
+            <TextView
+                android:id="@+id/SetsB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="@string/_0"
+                android:textSize="25sp"
+                android:layout_marginRight="50dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/buttonB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addpointPlayerB"
+                android:text="@string/point_for_player_b"
+                android:textAllCaps="false"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="40dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/score"
+                android:textSize="15sp"
+                android:layout_marginRight="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                />
+
+            <TextView
+                android:id="@+id/ScoreB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/_0"
+                android:textSize="30sp"
+                android:layout_marginRight="30dp"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/badServeTextA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_above="@+id/badServeButtonA"
+        android:layout_alignRight="@+id/badServeButtonA"
+        android:layout_alignEnd="@+id/badServeButtonA"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp" />
+
+    <TextView
+        android:id="@+id/badServeTextB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_marginRight="28dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/badServeTextA"
+        android:layout_alignBottom="@+id/badServeTextA"
+        android:layout_alignRight="@+id/badServeButtonB"
+        android:layout_alignEnd="@+id/badServeButtonB"
+        android:layout_marginEnd="28dp" />
+
+    <Button
+        android:id="@+id/badServeButtonA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bad_serve"
+        android:onClick="badServesA"
+        android:layout_alignBottom="@+id/button5"
+        android:layout_toLeftOf="@+id/button5"
+        android:layout_toStartOf="@+id/button5"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="21dp" />
+
+    <Button
+        android:id="@+id/badServeButtonB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bad_serve"
+        android:onClick="badServesB"
+        android:layout_below="@+id/badServeTextB"
+        android:layout_toRightOf="@+id/button5"
+        android:layout_toEndOf="@+id/button5"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+</RelativeLayout>

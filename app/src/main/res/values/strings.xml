@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Table Tennis</string>
+    <string name="reset">Reset</string>
+    <string name="player_a">Player A</string>
+    <string name="sets">Sets</string>
+    <string name="_0">0</string>
+    <string name="point_for_player_a">Point for Player A</string>
+    <string name="score">Score</string>
+    <string name="player_b">Player B</string>
+    <string name="point_for_player_b">Point for Player B</string>
+    <string name="bad_serve">Bad serve</string>
+</resources>
