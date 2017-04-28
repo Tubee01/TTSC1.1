@@ -2,13 +2,10 @@ package com.example.android.ttsc;
 
 import android.support.v7.app.AppCompatActivity;
 
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.TextView;
-
-
-
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int scoreA = 0;
@@ -30,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         AddPointToPlayer(0);
     }
 
-
     private void displayForSetsA(int setsA) {
         TextView scoreView = (TextView) findViewById(R.id.SetsA);
         scoreView.setText(String.valueOf(setsA));
@@ -40,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.SetsB);
         scoreView.setText(String.valueOf(setsB));
     }
-
-
     /**
      * Displays the given score for Player A.
      */
@@ -56,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         AddPointToPlayer(1);
     }
 
-
     public void displayWinnerText(String text){
         TextView textView = (TextView) findViewById(R.id.WinnerText);
         textView.setText(text);
@@ -65,12 +58,9 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.ScoreB);
         scoreView.setText(String.valueOf(score));
     }
-
-
     public void displayForBadServeA(int score) {
         TextView scoreView = (TextView) findViewById(R.id.badServeTextA);
         scoreView.setText(String.valueOf(score));
-
     }
     public void displayForBadServeB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.badServeTextB);
@@ -83,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
         scoreB = 0;
         badServeA = 0;
         badServeB = 0;
-
-
 
         displayWinnerText("");
         displayForSetsA(setsA);
@@ -136,15 +124,8 @@ public class MainActivity extends AppCompatActivity {
             if (setsB==3){
                 displayWinnerMessage(1);
                 SetButtonsState(false);
-
             }
-
         }
-
-
-
-
-
     }
     public void displayWinnerMessage(int player) {
         TextView Textwinner;
@@ -159,8 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
         String WinnerMessage = "The Winner is " + playerName + "!";
         Textwinner.setText(WinnerMessage);
-
-
     }
     public void badServesA(View view){ badServePoint(2);}
     public void badServesB(View view) {badServePoint(3);}
@@ -187,14 +166,7 @@ public class MainActivity extends AppCompatActivity {
             badServeA = 0;
             displayForBadServeA(badServeA);
         }
-
-
     }
-
-
-
-
-
     public void SetButtonsState(boolean state){
         Button buttonA= (Button) findViewById(R.id.buttonA);
         Button buttonB= (Button) findViewById(R.id.buttonB);
@@ -208,4 +180,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
